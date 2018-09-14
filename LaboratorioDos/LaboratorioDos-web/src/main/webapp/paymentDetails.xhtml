@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Hello from Facelets</h1>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Id:" for="id" />
+                    <p:inputText id="id" value="#{paymentMBean.details.id}" title="Id" required="true" requiredMessage="The Id field is required."/>
+                    <p:outputLabel value="Amount:" for="amount" />
+                    <p:inputText id="amount" value="#{paymentMBean.details.amount}" title="Amount" required="true" requiredMessage="The Amount field is required."/>
+                    <p:outputLabel value="Card:" for="card" />
+                    <p:inputText id="card" value="#{paymentMBean.details.card}" title="Card" required="true" requiredMessage="The Card field is required."/>
+                    <p:outputLabel value="Date:" for="date" />
+                    <p:inputText id="date" value="#{paymentMBean.details.date}" title="Date" required="true" requiredMessage="The Date field is required.">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </p:inputText>
+                    <p:outputLabel value="Cvv:" for="cvv" />
+                    <p:inputText id="cvv" value="#{paymentMBean.details.cvv}" title="Cvv" required="true" requiredMessage="The Cvv field is required."/>
+                </p:panelGrid>
+                  <h2>Primefaces - Captcha</h2>
+            <p:messages id="msg"/>
+            <p:captcha id="captcha"></p:captcha>
+            <br/>
+                <p:commandButton id="back" value="Back" action="#{paymentMBean.list()}"/>
+                <p:commandButton id="update" value="Update" action="#{paymentMBean.update()}"/>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
