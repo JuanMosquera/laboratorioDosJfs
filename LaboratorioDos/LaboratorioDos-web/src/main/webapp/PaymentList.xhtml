@@ -24,42 +24,42 @@
 
             <h:form>
                 <h1><h:outputText value="List"/></h1>
-                <h:dataTable value="#{paymentMBean.payments}" 
+                <p:dataTable value="#{paymentMBean.payments}" 
                              var="item"
                              >
-                    <h:column>
+                    <p:column>
                         <f:facet name="header">
                             <h:outputText value="Id"/>
                         </f:facet>
                         <h:outputText value="#{item.id}"/>
-                    </h:column>
-                    <h:column>
+                    </p:column>
+                    <p:column>
                         <f:facet name="header">
                             <h:outputText value="Amount"/>
                         </f:facet>
                         <h:outputText value="#{item.amount}"/>
-                    </h:column>
-                    <h:column>
+                    </p:column>
+                    <p:column>
                         <f:facet name="header">
                             <h:outputText value="Card"/>
                         </f:facet>
                         <h:outputText value="#{item.card}"/>
-                    </h:column>
-                    <h:column>
+                    </p:column>
+                    <p:column>
                         <f:facet name="header">
                             <h:outputText value="Date"/>
                         </f:facet>
                         <h:outputText value="#{item.date}">
                             <f:convertDateTime pattern="MM/dd/yyyy" />
                         </h:outputText>
-                    </h:column>
-                    <h:column>
+                    </p:column>
+                    <p:column>
                         <f:facet name="header">
                             <h:outputText value="Cvv"/>
                         </f:facet>
                         <h:outputText value="#{item.cvv}"/>
-                    </h:column>
-                </h:dataTable>
+                    </p:column>
+                </p:dataTable>
             </h:form>
         </f:view>
 

@@ -6,6 +6,7 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </h:head>
     <h:body>
         <h1>Hello from Facelets</h1>
@@ -17,17 +18,23 @@
                 <p:panelGrid columns="2">
                     <p:outputLabel value="Id:" for="id" />
                     <p:inputText id="id" value="#{PaymentMBean.details.id}" title="Id" required="true" requiredMessage="The Id field is required."/>
-                    <p:outputLabel value="Amount:" for="amount" />
+                    <p:outputLabel value="Cantidad:" for="amount" />
                     <p:inputText id="amount" value="#{paymentMBean.details.amount}" title="Amount" required="true" requiredMessage="The Amount field is required."/>
-                    <p:outputLabel value="Card:" for="card" />
+                    <p:outputLabel value="Tarjeta de credito:" for="card" />
                     <p:inputText id="card" value="#{paymentMBean.details.card}" title="Card" required="true" requiredMessage="The Card field is required."/>
-                    <p:outputLabel value="Date:" for="date" />
+                    <p:outputLabel value="Fecha de expiracion(mes/año):" for="date" />
                     <p:inputText id="date" value="#{paymentMBean.details.date}" title="Date" required="true" requiredMessage="The Date field is required.">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </p:inputText>
                     <p:outputLabel value="Cvv:" for="cvv" />
                     <p:inputText id="cvv" value="#{paymentMBean.details.cvv}" title="Cvv" required="true" requiredMessage="The Cvv field is required."/>
                 </p:panelGrid>
+                <br/>
+                <!--<div class="g-recaptcha" data-sitekey="6LcYWG8UAAAAABU0K8BL7elKbF4c_CX4b7kILBJp"></div>-->
+                
+               <h:commandButton id="back" value="Back" action="#{paymentMBean.list()}"/>
+               <h:commandButton id="update" value="Update" action="#{paymentMBean.update()}"/>
+                
             </h:form>
         </f:view>
 
