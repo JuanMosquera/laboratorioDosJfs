@@ -33,10 +33,6 @@ public class PaymentManager implements PaymentManagerLocal {
         return query.getResultList() ;
     }
 
-//    @Override
-//    public PaymentManager update(PaymentManager payment) {
-//        return em.merge(payment);
-//    }
     @Override
     public Payment update(Payment payment) {
         return em.merge(payment);
