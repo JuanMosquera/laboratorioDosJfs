@@ -16,7 +16,7 @@
                 <h1><h:outputText value="Create/Edit"/></h1>
                 <p:panelGrid columns="2">
                     <p:outputLabel value="Id:" for="id" />
-                    <p:inputText id="id" value="#{paymentMBean.details.id}" title="Id" required="true" requiredMessage="The Id field is required."/>
+                    <p:inputText id="id" value="#{PaymentMBean.details.id}" title="Id" required="true" requiredMessage="The Id field is required."/>
                     <p:outputLabel value="Amount:" for="amount" />
                     <p:inputText id="amount" value="#{paymentMBean.details.amount}" title="Amount" required="true" requiredMessage="The Amount field is required."/>
                     <p:outputLabel value="Card:" for="card" />
@@ -28,14 +28,9 @@
                     <p:outputLabel value="Cvv:" for="cvv" />
                     <p:inputText id="cvv" value="#{paymentMBean.details.cvv}" title="Cvv" required="true" requiredMessage="The Cvv field is required."/>
                 </p:panelGrid>
-                  <h2>Primefaces - Captcha</h2>
-            <p:messages id="msg"/>
-            <p:captcha id="captcha"></p:captcha>
-            <br/>
-                <p:commandButton id="back" value="Back" action="#{paymentMBean.list()}"/>
-                <p:commandButton id="update" value="Update" action="#{paymentMBean.update()}"/>
             </h:form>
         </f:view>
+
 
     </h:body>
 </html>

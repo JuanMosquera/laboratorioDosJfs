@@ -7,14 +7,19 @@ package com.udea.controller;
 
 import com.udea.entity.Payment;
 import com.udea.session.PaymentManagerLocal;
+import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 
 /**
  *
  * @author jfwc1
  */
-public class PaymentMBean {
+//@Named(value="paymentMBean")
+//@SessionScoped
+public class PaymentMBean implements Serializable{
 
     @EJB
     private PaymentManagerLocal paymentManager;

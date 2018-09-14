@@ -18,7 +18,6 @@ public interface PaymentManagerLocal {
 
     List<Payment> getAllPayment();
 
-//    PaymentManager update(PaymentManager payment);
 
     Payment update(Payment payment);
     

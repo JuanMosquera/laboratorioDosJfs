@@ -24,8 +24,8 @@ public class PaymentManager implements PaymentManagerLocal {
 
     @PersistenceContext(unitName = "com.udea_LaboratorioDos-ejb_ejb_1.0-SNAPSHOTPU")
     private EntityManager em;
-    @Resource
-    private javax.transaction.UserTransaction utx;
+//    @Resource
+//    private javax.transaction.UserTransaction utx;
 
     @Override
     public List<Payment> getAllPayment() {
@@ -38,16 +38,16 @@ public class PaymentManager implements PaymentManagerLocal {
         return em.merge(payment);
     }
 
-    public void persist(Object object) {
-        try {
-            utx.begin();
-            em.persist(object);
-            utx.commit();
-        } catch (Exception e) {
-            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", e);
-            throw new RuntimeException(e);
-        }
-    }
+//    public void persist(Object object) {
+//        try {
+//            utx.begin();
+//            em.persist(object);
+//            utx.commit();
+//        } catch (Exception e) {
+//            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", e);
+//            throw new RuntimeException(e);
+//        }
+//    }
 
    
 }

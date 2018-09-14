@@ -9,7 +9,7 @@
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
     <navigation-rule>
-        <from-view-id>/paymentDetails.xhtml</from-view-id>
+        <from-view-id>/PaymentDetails.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>SAVED</from-outcome>
             <to-view-id>/PaymentList.xhtml</to-view-id>
@@ -23,7 +23,8 @@
         <from-view-id>/PaymentList.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>DETAILS</from-outcome>
-            <to-view-id>/paymentDetails.xhtml</to-view-id>
+            <to-view-id>/PaymentDetails.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+   
 </faces-config>
